@@ -102,7 +102,7 @@ local function match_loop(context, dispatcher, tick, state, messages)
       local playerDataString = nk.json_decode(decoded['_playerDataString'])
       local msg = {
         _opCode = decoded['_opCode'],
-        _callId = decoded['_callId'],
+        -- _callId = decoded['_callId'],
         _playerDataString = nk.json_encode(playerDataString)
       }
       print("sending match state" .. context.match_id .. " messages:\n" .. du.print_r(msg))

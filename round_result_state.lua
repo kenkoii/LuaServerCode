@@ -31,7 +31,7 @@ function M:new()
     end
 
     function object:SetPlayer1Speedy(index, points)
-        object._playerAnswers[index]._player1Points = points
+        object._playerAnswers[index]._player1Speedy = points
     end
 
     function object:SetQuestionAnswer(index, questionAnswer)
@@ -43,7 +43,7 @@ function M:new()
     end
 
     function object:SetPlayer2Speedy(index, points)
-        object._playerAnswers[index]._player2Points = points
+        object._playerAnswers[index]._player2Speedy = points
     end
 
     return object

@@ -364,8 +364,15 @@ function add_question_filter(question_filter)
   else
     filter.playerLevel = rank - 1
   end
-  filter.selectionType = question_filters[math.random(1, #question_filters)].selectionType
-  filter.targetType = question_filters[math.random(1, #question_filters)].targetType
+  -- filter.selectionType = question_filters[math.random(1, #question_filters)].selectionType
+  -- filter.targetType = question_filters[math.random(1, #question_filters)].targetType
+  if question_filters[1].playerRank < question_filters[2].playerRank then
+    filter.selectionType = question_filters[1].selectionType;
+    filter.targetType = question_filters[1].targetType;
+  else
+    filter.selectionType = question_filters[2].selectionType;
+    filter.targetType = question_filters[2].targetType;
+  end
   return true
 end
 
